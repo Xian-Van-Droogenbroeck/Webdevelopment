@@ -13,12 +13,14 @@
         <div class="header-container">
             <nav class="navbar">
             <div class="icons">
-                <div class="search-icon" id="search-icon">
-                    <i class="fas fa-search"></i>
-                </div>
-                <div class="search-input" id="search-input">
-                    <input type="text" placeholder="Search...">
-                </div>
+<div class="search-icon" id="search-icon">
+    <i class="fas fa-search"></i>
+</div>
+<div class="search-container" id="search-container">
+    <div class="search-input" id="search-input">
+        <input type="text" placeholder="Search...">
+    </div>
+</div>
                 <div class="profile-icon">
                     <i class="fas fa-user"></i>
                 </div>
@@ -80,21 +82,23 @@
 
     <script>
         // Get references to the search icon and input field
-        const searchIcon = document.getElementById('search-icon');
-        const searchInput = document.getElementById('search-input');
-    
-        // Add a click event listener to the search icon
-        searchIcon.addEventListener('click', function(event) {
-            event.stopPropagation(); // Prevent clicks on the search icon from closing the input
-            // Toggle the visibility of the search input
-            if (searchInput.style.display === 'none' || searchInput.style.display === '') {
-                searchInput.style.display = 'block';
-            } else {
-                searchInput.style.display = 'none';
-            }
-        });
-    
-        // Add a click event listener to the document to close the search input
+const searchIcon = document.getElementById('search-icon');
+const searchInput = document.getElementById('search-input');
+
+// Add a click event listener to the search icon
+searchIcon.addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent clicks on the search icon from closing the input
+
+    // Toggle the active class on the search input
+    searchInput.classList.toggle('active');
+
+    // Focus on the input field when it becomes visible
+    if (searchInput.classList.contains('active')) {
+        searchInput.querySelector('input').focus();
+    }
+});
+
+// Add a click event listener to the document to close the search input
 document.addEventListener('click', function (event) {
     // Check if the click occurred outside of the search input and search icon
     if (
@@ -102,7 +106,7 @@ document.addEventListener('click', function (event) {
         event.target !== searchIcon &&
         !searchInput.contains(event.target) // Check if the click is not inside the search input
     ) {
-        searchInput.style.display = 'none';
+        searchInput.classList.remove('active');
     }
 });
     </script>
