@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AristoElegance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <nav class="navbar">
+            <div class="icons">
+                <div class="search-icon" id="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="search-input" id="search-input">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="profile-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="shopping-bag-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+            </div>
+        </nav>
+    </div>
+    </header>
+
+    <div class="logo" id="logo">
+        <img src="static/svg/Logo.svg" alt="Your Logo">
+        <h3>Elevate Your Elegance</h3>
+    </div>
+
+    <main>
+        <section class="clothing-category">
+            <h2 class="category-title-women">Women's Clothing</h2>
+        <section class="clothing-grid">
+                <div class="clothing-grid">
+            <div class="clothing-item">
+                <img src="static/jpg/Women 1.jpeg" alt="EbonElegance Dress">
+                <h3 class="clothing-title">EbonElegance Dress</h3>
+                <button class="view-button">View</button>
+            </div>
+            <div class="clothing-item">
+                <img src="static/jpg/Women 2.jpeg" alt="Nocturnal Noir Dress">
+                <h3 class="clothing-title">Nocturnal Noir Dress</h3>
+                <button class="view-button">View</button>
+            </div>
+            <div class="clothing-item">
+                <img src="static/jpg/Women 3.jpeg" alt="Raven Tuxedo Suit">
+                <h3 class="clothing-title">Raven Tuxedo Suit</h3>
+                <button class="view-button">View</button>
+            </div>
+        </div>
+        </section>
+
+        <section class="clothing-category">
+            <h2 class="category-title-men">Men's Clothing</h2>
+        <section class="mens-clothing">
+            <div class="clothing-grid">
+                <div class="clothing-item">
+                    <img src="static/jpg/Man 1.jpeg" alt="Midnight Majesty Suit">
+                    <h3 class="clothing-title">Midnight Majesty Suit</h3>
+                    <button class="view-button">View</button>
+                </div>
+                <div class="clothing-item">
+                    <img src="static/jpg/Man 2.jpeg" alt="Obsidian Elegance Suit">
+                    <h3 class="clothing-title">Obsidian Elegance Suit</h3>
+                    <button class="view-button">View</button>
+                </div>
+            </div>
+        </div>
+        </section>
+    </main>
+    <footer></footer>
+
+    <script>
+        // Get references to the search icon and input field
+        const searchIcon = document.getElementById('search-icon');
+        const searchInput = document.getElementById('search-input');
+    
+        // Add a click event listener to the search icon
+        searchIcon.addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevent clicks on the search icon from closing the input
+            // Toggle the visibility of the search input
+            if (searchInput.style.display === 'none' || searchInput.style.display === '') {
+                searchInput.style.display = 'block';
+            } else {
+                searchInput.style.display = 'none';
+            }
+        });
+    
+        // Add a click event listener to the document to close the search input
+document.addEventListener('click', function (event) {
+    // Check if the click occurred outside of the search input and search icon
+    if (
+        event.target !== searchInput &&
+        event.target !== searchIcon &&
+        !searchInput.contains(event.target) // Check if the click is not inside the search input
+    ) {
+        searchInput.style.display = 'none';
+    }
+});
+    </script>
+
+<script>
+    // Get a reference to the logo element
+    const logo = document.getElementById('logo');
+
+    // Add a scroll event listener
+    window.addEventListener('scroll', () => {
+        // Calculate the scroll position
+        const scrollY = window.scrollY;
+
+        // Determine the opacity based on the scroll position
+        const opacity = 1 - scrollY / 400; // Adjust the value (400) to control the fading speed
+
+        // Apply the opacity to the logo
+        logo.style.opacity = opacity;
+    });
+</script>
+    
+</body>
+</html>

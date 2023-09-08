@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@0,6..96;1,6..96&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    background-image: url('static/jpg/Background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.header-container {
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: white;
+}
+
+.logo img {
+    width: 70%;
+    margin-top: 1%;
+}
+
+.icons {
+    display: flex;
+}
+
+.icons div i {
+    font-size: 20px;
+}
+
+.search-input {
+    display: none;
+}
+
+.icons div {
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.icons div:hover {
+    color: gray;
+}
+
+#logo {
+    margin-top: 20%;
+    width: 70%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    transition: opacity 0s ease-in-out;
+}
+
+#logo h3 {
+    color: white;
+    font-size: 30px;
+}
+
+#logo.hidden {
+    top: 0;
+    opacity: 0;
+}
+
+main {
+    background-color: black;
+    margin-top: 50%;
+    padding-top: 2%;
+}
+
+.category-title-men {
+    font-size: 30px;
+    margin-bottom: -2%;
+    margin-top: 5%;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.category-title-women {
+    margin-bottom: -2%;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.clothing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.clothing-title {
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.clothing-item {
+    position: relative;
+    border: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.clothing-item:hover {
+    transform: translateY(-5px);
+}
+
+.clothing-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.view-button {
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #333;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.view-button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.clothing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.mens-clothing {
+    max-width: 70%; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center the section horizontally */
+    padding: 20px; /* Add padding for spacing */
+    text-align: center; /* Center the content within the section */
+}
+
+.clothing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid columns */
+    gap: 20px;
+    justify-content: center; /* Center the grid horizontally */
+}

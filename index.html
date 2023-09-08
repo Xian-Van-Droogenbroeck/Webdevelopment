@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn websites</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Xian Van Droogenbroeck</h1>
+    </header>
+    <nav>
+        <a href="#website1">AristoElegance</a>
+        <a href="#website2">Website 2</a>
+        <a href="#website3">Website 3</a>
+    </nav>
+    <div class="container">
+        <section id="website1">
+            <h2>AristoElegance</h2>
+            <p>Van opdracht "Even opfrissen".</p>
+            <a class="website-link animated" href="Code opfrissen/">Visit Website</a>
+        </section>
+        <section id="website2">
+            <h2>Website 2</h2>
+            <p>...</p>
+            <a class="website-link animated" href="#">Visit Website</a>
+        </section>
+        <section id="website3">
+            <h2>Website 3</h2>
+            <p>...</p>
+            <a class="website-link animated" href="#">Visit Website</a>
+        </section>
+    </div>
+    <script>
+        // Add animation class to website links on mouseover
+        const websiteLinks = document.querySelectorAll('.website-link');
+        websiteLinks.forEach(link => {
+            link.addEventListener('mouseover', () => {
+                link.classList.add('animated');
+            });
+            link.addEventListener('mouseout', () => {
+                link.classList.remove('animated');
+            });
+        });
+    </script>
+</body>
+</html>
