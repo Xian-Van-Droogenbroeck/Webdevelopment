@@ -39,25 +39,34 @@
 
     <main>
         <section class="clothing-category">
-            <h2 class="category-title-women">Women's Clothing</h2>
-        <section class="clothing-grid">
-                <div class="clothing-grid">
-            <div class="clothing-item">
-                <img src="static/jpg/Women 1.jpeg" alt="EbonElegance Dress">
-                <h3 class="clothing-title">EbonElegance Dress</h3>
-                <button class="view-button">View</button>
-            </div>
-            <div class="clothing-item">
-                <img src="static/jpg/Women 2.jpeg" alt="Nocturnal Noir Dress">
-                <h3 class="clothing-title">Nocturnal Noir Dress</h3>
-                <button class="view-button">View</button>
-            </div>
-            <div class="clothing-item">
-                <img src="static/jpg/Women 3.jpeg" alt="Raven Tuxedo Suit">
-                <h3 class="clothing-title">Raven Tuxedo Suit</h3>
-                <button class="view-button">View</button>
-            </div>
-        </div>
+            <div class="clothing-carousel">
+                <div class="clothing-carousel-container">
+                    <div class="clothing-item">
+                        <img src="static/jpg/Women 1.jpeg" alt="EbonElegance Dress">
+                        <h3 class="clothing-title">EbonElegance Dress</h3>
+                        <button class="view-button">View</button>
+                    </div>
+                    <div class="clothing-item">
+                        <img src="static/jpg/Women 2.jpeg" alt="Nocturnal Noir Dress">
+                        <h3 class="clothing-title">Nocturnal Noir Dress</h3>
+                        <button class="view-button">View</button>
+                    </div>
+                    <div class="clothing-item">
+                        <img src="static/jpg/Women 3.jpeg" alt="Raven Tuxedo Suit">
+                        <h3 class="clothing-title">Raven Tuxedo Suit</h3>
+                        <button class="view-button">View</button>
+                    </div>
+                    <div class="clothing-item">
+                        <img src="static/jpg/Women 4.jpeg" alt="Raven Tuxedo Suit">
+                        <h3 class="clothing-title">Raven Tuxedo Suit</h3>
+                        <button class="view-button">View</button>
+                    </div>
+                </div>
+                <div class="carousel-navigation">
+                    <i class="fas fa-chevron-left" id="prev-btn"></i>
+                    <i class="fas fa-chevron-right" id="next-btn"></i>
+                </div>
+            </div>            
         </section>
 
         <section class="clothing-category">
@@ -128,5 +137,31 @@ document.addEventListener('click', function (event) {
     });
 </script>
     
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const container = document.querySelector('.clothing-carousel-container');
+
+    let currentIndex = 0;
+    const clothingItems = document.querySelectorAll('.clothing-item');
+
+    function showItems(index) {
+        const translateX = index * -25; // Adjusted for four items
+        container.style.transform = `translateX(${translateX}%)`;
+    }
+
+    prevBtn.addEventListener('click', function () {
+        currentIndex = (currentIndex - 2 + clothingItems.length) % clothingItems.length;
+        showItems(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', function () {
+        currentIndex = (currentIndex + 2) % clothingItems.length;
+        showItems(currentIndex);
+    });
+});
+
+</script>
 </body>
 </html>

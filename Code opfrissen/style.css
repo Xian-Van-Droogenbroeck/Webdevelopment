@@ -185,3 +185,59 @@ main {
     gap: 20px;
     justify-content: center; /* Center the grid horizontally */
 }
+
+/* Add styles for the clothing carousel */
+.clothing-carousel {
+    max-width: 70%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.clothing-carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.clothing-item {
+    flex: 0 0 50%; /* Adjust the width as needed */
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.clothing-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.carousel-navigation i {
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Remove the border from women's clothing items */
+.clothing-item {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* Apply styles to the men's clothing items */
+.mens-clothing .clothing-item {
+    border: 2px solid #333;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.mens-clothing .clothing-item:hover {
+    transform: translateY(-5px);
+}
