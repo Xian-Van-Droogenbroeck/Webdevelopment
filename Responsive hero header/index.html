@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="static/svg/Logo.svg" alt="Logo" class="logo">
+        <input type="checkbox" id="menu-toggle">
+   <label for="menu-toggle" class="hamburger">
+       <span></span>
+       <span></span>
+       <span></span>
+   </label>
+        <nav>
+            <ul>
+                <li><a href="#">Headphones</a></li>
+                <li><a href="#">Speakers</a></li>
+                <li><a href="#">Backstage</a></li>
+                <li><a href="#">Studio</a></li>
+                <li><a href="#">Accessories</a></li>
+                <button class="login-button">Login</button>
+            </ul>
+        </nav>
+     </header>     
+    <main>
+        <h1 class="intro-title-tabletgsm">Build your own </br> wall of sound.</h1>
+        <img src="static/png/boxes-pc.png" alt="Boxes image" class="boxes-pc">
+        <img src="static/png/boxes-tablet.png" alt="Boxes image" class="boxes-tablet">
+        <img src="static/png/boxes-gsm.png" alt="Boxes image" class="boxes-gsm">
+
+        <div class="intro">
+            <h1 class="intro-title">Build your own </br> wall of sound.</h1>
+            <p class="intro-description">Winners aren’t made overnight. Over 50 years of sound and </br> design expertise has been distilled into each and every </br> Marshall speaker, bringing that big stage presence home for </br> your listening enjoyment.</p>
+            <button class="intro-button">View All Products</button>
+        </div>        
+    </main>
+</body>
+<script>
+document.querySelector('nav').style.display = 'none';
+document.getElementById('menu-toggle').addEventListener('change', function() {
+  var nav = document.querySelector('nav');
+  nav.style.display = this.checked ? 'block' : 'none';
+});
+
+</script>
+</html>

@@ -1,0 +1,167 @@
+/*
+Font-sizes in em/rem
+Element width in % of vw
+left, right margin en padding %
+flexbox
+*/
+
+/* ---- FONTS ---- */
+/* 
+font-family: 'Epilogue', sans-serif;
+font-family:;
+font-family:;
+*/
+
+/* ---- COLORS ---- */
+/* 
+color: #FFF; (text color)
+color: #EF6D58; (accent color)
+color: #28293E;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+body{
+    background-color: #28293E;
+}
+
+.container{
+    max-width: 90%;
+    margin: auto;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: none;
+    flex-direction: column;
+}
+
+.nav-links li {
+    margin: 5px 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+}
+
+.menu{
+    padding-right: 2%;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+}
+
+.hero_txt{
+    font-family: 'Epilogue', sans-serif;
+    margin-top: 3%;
+}
+
+.hero_txt h2{
+    color: #EF6D58;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.hero_txt h1,p{
+    color: #FFF;
+}
+
+.hero_txt p{
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 3%;
+    opacity: 64%;
+}
+
+.hero_txt h1{
+    font-weight: 800;
+    font-size: 3.5rem;
+    margin-top: 3%;
+}
+
+.hero_img{
+    margin-top: 3%;
+}
+
+.button {
+    margin-top: 3%;
+    font-weight: 900;
+    display: inline-block;
+    background-color: #EF6D58;
+    color: #FFF;
+    padding: 20px 30px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        gap: 10px;
+        flex-direction: row;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .hero{
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 20%;
+        width: 100%;
+    }
+
+    .hero_txt p, h1, h2{
+        margin-top: 5%;
+    }
+
+    .hero_txt a{
+        margin-top: 5%;
+    }
+}
