@@ -96,6 +96,7 @@ nav a:hover {
 }
 
 .intro-description {
+    width: 50%;
     font-size: 16px;
     margin: 0;
 }
@@ -234,5 +235,18 @@ nav a:hover {
 
     nav ul {
         margin-left: 10%;
+    }
+
+    .intro-title-tabletgsm {
+        font-size: 2.5rem;
+    }
+
+    .intro-description {
+        font-size: 0.75rem;
+        text-align: left;
+        width: 80%;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
