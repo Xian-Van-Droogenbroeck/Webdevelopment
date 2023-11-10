@@ -4,9 +4,6 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to top right, rgba(37, 37, 37, 1), rgba(37, 37, 37, 1));
-}
-
-body, ul, nav a, .intro-title, .intro-description, .intro-button {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -14,6 +11,7 @@ body, ul, nav a, .intro-title, .intro-description, .intro-button {
     font-weight: 400;
 }
 
+/* Header Styles */
 header {
     color: #fff;
     display: flex;
@@ -71,15 +69,11 @@ nav a:hover {
     color: #fff;
 }
 
-.boxes-pc {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    max-width: 50%;
-    height: auto;
+.intro-title-tabletgsm {
+    display: none;
 }
 
+/* Intro Section Styles */
 .intro {
     position: absolute;
     top: 50%;
@@ -117,25 +111,32 @@ nav a:hover {
     background-color: #D6AC26;
 }
 
+/* Box Styles */
+.boxes-pc {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    max-width: 50%;
+    height: auto;
+}
+
 .boxes-tablet, .boxes-gsm {
     display: none;
 }
 
-.intro-title-tabletgsm {
+/* Hamburger display */
+#menu-toggle {
     display: none;
 }
 
-/*Hamburger*/
-#menu-toggle {
-    display: none;
-  }
-
+/* Responsive Styles */
 @media only screen and (max-width: 1024px) {
     .boxes-tablet {
         display: flex;
         margin: auto;
     }
-    
+
     .boxes-pc, .boxes-gsm {
         display: none;
     }
@@ -183,8 +184,8 @@ nav a:hover {
         margin-left: auto;
         margin-right: auto;
     }
-    
-    /*Hamburger menu*/
+
+    /* Hamburger menu */
     .hamburger {
         cursor: pointer;
         display: flex;
@@ -196,7 +197,7 @@ nav a:hover {
         border: none;
         z-index: 10;
     }
- 
+
     .hamburger span {
         width: 2rem;
         height: 0.25rem;
@@ -204,18 +205,18 @@ nav a:hover {
         border-radius: 10px;
         transition: all 0.3s linear;
     }
- 
+
     nav {
         position: absolute;
         margin-top: 15%;
         left: auto;
         right: 0;
-     }     
- 
+    }
+
     #menu-toggle:checked ~ nav {
         display: block;
     }
- 
+
     #menu-toggle {
         display: none;
     }
@@ -228,7 +229,7 @@ nav a:hover {
 
     .boxes-gsm {
         display: flex;
-        margin-left: auto
+        margin-left: auto;
     }
 
     .logo {
