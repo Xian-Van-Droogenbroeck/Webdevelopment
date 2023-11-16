@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top right, rgba(37, 37, 37, 1), rgba(37, 37, 37, 1));
+    font-family: 'Poppins', sans-serif;
+}
+
+.intro-description, .intro-button {
+    font-weight: 400;
+}
+
+/* Header Styles */
+header {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 100%;
+    margin-left: 100%;
+    margin-top: 10%;
+}
+
+nav {
+    margin-right: 10%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+.login-button {
+    margin-left: 5%;
+    background-color: transparent;
+    border: 2px solid #ccc;
+    color: #ccc;
+    padding: 10px 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #ccc;
+    color: #fff;
+}
+
+.intro-title-tabletgsm {
+    display: none;
+}
+
+/* Intro Section Styles */
+.intro {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    text-align: left;
+    color: #fff;
+}
+
+.intro-title {
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.intro-description {
+    width: 50%;
+    font-size: 16px;
+    margin: 0;
+}
+
+.intro-button {
+    background-color: #F2C034;
+    border: none;
+    border-radius: 3px;
+    padding: 20px 35px;
+    font-size: 14px;
+    color: #000;
+    margin-top: 10%;
+    transition: background-color 0.3s;
+}
+
+.intro-button:hover {
+    background-color: #D6AC26;
+}
+
+/* Box Styles */
+.boxes-pc {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    max-width: 50%;
+    height: auto;
+}
+
+.boxes-tablet, .boxes-gsm {
+    display: none;
+}
+
+/* Hamburger display */
+#menu-toggle {
+    display: none;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 1024px) {
+    .boxes-tablet {
+        display: flex;
+        margin: auto;
+    }
+
+    .boxes-pc, .boxes-gsm {
+        display: none;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: flex-start;
+        width: 15%;
+        margin-left: 5%;
+        margin-top: 1%;
+    }
+
+    .intro-title {
+        display: none;
+    }
+
+    .intro-title-tabletgsm {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        font-weight: 700;
+        font-size: 4rem;
+        margin-bottom: 3%;
+    }
+
+    .intro {
+        position: unset;
+        transform: none;
+    }
+
+    .intro-description {
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .intro-button {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Hamburger menu */
+    .hamburger {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 2rem;
+        height: 2rem;
+        background: transparent;
+        border: none;
+        z-index: 10;
+    }
+
+    .hamburger span {
+        width: 2rem;
+        height: 0.25rem;
+        background: #fff;
+        border-radius: 10px;
+        transition: all 0.3s linear;
+    }
+
+    nav {
+        position: absolute;
+        margin-top: 15%;
+        left: auto;
+        right: 0;
+    }
+
+    #menu-toggle:checked ~ nav {
+        display: block;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .boxes-tablet, .boxes-pc {
+        display: none;
+    }
+
+    .boxes-gsm {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .logo {
+        width: 20%;
+    }
+
+    nav ul {
+        margin-left: 10%;
+    }
+
+    .intro-title-tabletgsm {
+        font-size: 2.5rem;
+    }
+
+    .intro-description {
+        font-size: 0.75rem;
+        text-align: left;
+        width: 80%;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
