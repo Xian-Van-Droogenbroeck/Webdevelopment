@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.container{
+    background-color: aqua;
+    min-height: 500px;
+    max-width: 1024px;
+    margin: auto; /* zet alles in het midden */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col{
+    background-color: pink;
+    min-height: 200px;
+    width: 30%;
+    margin-bottom: 40px;
+}
+
+.hide-desktop{
+    display: none;
+}
+
+/* tablet view */
+@media (max-width: 750px){
+    .col{
+        width: 45%;
+    }
+
+    .hide-desktop{
+        display: block;
+    }
+}
+
+/* mobile view*/
+@media (max-width: 300px){
+    .col{
+        width: 100%;
+    }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Bike Repairs</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="index.html"><img src="img/logo-roar-bikes.svg" alt="Logo for bike"></a>
+            </div>
+            
+            <nav>
+                <div class="navbutton">
+                <a href="#" class="mybutton">Book Online</a>
+
+
+                <div class="dropdown">
+                    <div class="navbutton"><a href="#">Onsite Service</a></div>
+                    <div class="navbutton"><a href="#">Parts Delivery</a></div>
+                    <div class="navbutton"><a href="#">Request Callback</a></div>
+                </div>
+            </div>
+
+
+
+                <a href="#" class="mybutton">About</a>
+                <a href="#" class="mybutton">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <form action="mail.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your e-mail" required>
+                
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments"></textarea>
+                
+                <label for="newsletter">Sign up for our newsletter:</label>
+                <input type="checkbox" id="newsletter" name="newsletter">
+                
+                <p>Preferred contact method:</p>
+                <input type="radio" id="phone" name="contact" value="phone">
+                <label for="phone">Phone</label><br>
+                <input type="radio" id="email" name="contact" value="email">
+                <label for="email">E-mail</label><br>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </main>
+        
+        <div class="cards">
+            <div class="card1">
+                <i class="fa-solid fa-bus"></i>
+                <h1>Book online</h1>
+                <p>dolor sit amet consectetur adipisicing elit. Vel, itaque rem totam dignissimos odio tempora!</p>
+            </div>
+            <div class="card2">
+                <i class="fa-solid fa-wrench"></i>
+                <h1>About</h1>
+                <p>dolor sit amet consectetur adipisicing elit. Vel, itaque rem totam dignissimos odio tempora!</p>
+            </div>
+            <div class="card3">
+                <i class="fa-solid fa-phone"></i>
+                <h1>Contact</h1>
+                <p>dolor sit amet consectetur adipisicing elit. Vel, itaque rem totam dignissimos odio tempora!</p>
+            </div>
+        </div>
+
+    <div class="testimonials">
+        <div class="tbox">
+            <p>"I would like to personally thank you for your outstanding product. You guys rock! It's all good. I can't say enough about Roar Cycles."</p>
+            <p>- Tammara I.</p>
+        </div>
+        <div class="tbox">
+            <p>"Roar Cycles is the most valuable business resource we have EVER purchased. I will let my mum know about this, she could really make use of Roar Cycles! Roar Cycles has completely surpassed our expectations."</p>
+            <p>- Floris V.</p>
+        </div>
+        <div class="tbox">
+            <p>"I'm good to go. Roar Cycles is both attractive and highly adaptable. I will refer everyone I know."</p>
+            <p>- Carlin B.</p>
+        </div>
+        <div class="tbox">
+            <p>"Roar Cycles impressed me on multiple levels. I would gladly pay over 600 dollars for Roar Cycles. We can't understand how we've been living without Roar Cycles."</p>
+            <p>- Eve V.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

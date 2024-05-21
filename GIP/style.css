@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&family=Didact+Gothic&family=Rambla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/*
+Fonts:
+font-family: "Biryani", sans-serif;
+font-family: "Rambla", sans-serif;
+font-family: "Didact Gothic", sans-serif;
+
+Color:
+color: #93b999; Donker groen
+color: #e4efdb; Licht groen
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+#loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    height: 100vh;
+}
+
+/*The Right-to-Left Color Swap Link Hover Effect*/
+a {
+    background-image: linear-gradient(
+      to right,
+      #719176,
+      #719176 50%,
+      #93b999 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  a:before{
+    content: '';
+    background: #719176;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  a:hover {
+   background-position: 0;
+  }
+  
+  a:hover::before{
+    width: 100%;
+  }
+
+
+nav {
+    font-family: "Rambla", sans-serif;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav li{
+    list-style-type: none;
+    margin-right: 2%;
+    margin-top: 2%;
+}
+
+nav a {
+    text-decoration: none;
+    color: #93b999;
+    font-size: 1.5rem;
+    margin-left: 1.25rem;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e4efdb;
+}
+
+.logo {
+    margin-top: 1%;
+    margin-left: 2%;
+    width: 35%;
+}
+
+.logo a {
+    background-color: none;
+}
+
+.logo a:before {
+    background: none;
+}
+
+.landing-page-plant {
+    position: fixed;
+    top: 0;
+    right: 30%;
+    width: auto;
+    height: 100vh;
+    z-index: -1;
+}
+
+.landing-page-plant img {
+    width: 100%;
+    height: 100%;
+}
+
+.header-text img {
+    margin-left: 2%;
+    margin-top: 5%;
+}
+
+.header-text p {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-family: "Rambla", sans-serif;
+    font-size: 1.25rem;
+    width: 40%;
+    color: #93b999;
+}
+
+.weetjes {
+    color: #93b999;
+    font-family: "Rambla", sans-serif;
+    margin-left: 75%;
+    margin-top: 5%;
+}
+
+.weetjes h2 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    width: 80%;
+    transition: 0.5s;
+}
+
+.weetjes p {
+    font-size: 1rem;
+    width: 70%;
+    transition: 0.5s;
+}
+
+.weetjes h2:hover {
+    color: #e4efdb;
+}
+
+.weetjes p:hover {
+    color: #e4efdb;
+}
+
+.over-ons {
+    margin-top: 10%;
+    font-family: "Rambla", sans-serif;
+}
+
+.over-ons h1 {
+    font-weight: 300;
+    font-size: 2.5rem;
+    margin-left: 5.5%;
+}
+
+.over-ons h1 span {
+    font-weight: 600;
+}
+
+.over-ons p {
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    color: #5F5F5F;
+    font-size: 2rem;
+    width: 83.5%;
+}
+
+.actionimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.actionimg img {
+    margin-left: 2%;
+    margin-right: 2%;
+    transition: 0.3s;
+}
+
+.actionimg img:hover {
+    transform: scale(1.1,1.1);
+}
+
+/* GALERIJ */
+#gallery-wrap {
+    margin-top: 20%;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+#gallery-wrap h1 {
+    position: absolute;
+    top: 270%;
+    margin-left: 2%;
+    font-family: "Rambla", sans-serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+
+#gallery-wrap h1 span {
+    font-weight: 600;
+    font-weight: 600;
+}
+
+#backBtn, #nextBtn {
+    cursor: pointer;
+    width: 2%;
+    height: auto;
+}
+
+#gallery {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: calc(100% - 100px); /* Adjust to leave space for buttons */
+}
+
+#gallery div {
+    min-width: calc((100% - 100px) / 3); /* Adjust to display 3 images at a time */
+    margin-left: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#gallery img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+#gallery img.middle {
+    transform: scale(1.1); /* Scale the middle image slightly larger */
+}
+
+#gallery::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
+/*Video*/
+#play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 1;
+}
+
+#player {
+    display: block;
+    height: auto;
+    width: 50%;
+}
+
+.video {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+}
+
+.video-text {
+    font-family: "Rambla", sans-serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+    margin-left: 5.5%;
+    margin-top: 15%;
+}
+
+/*Footer*/
+footer {
+    background-color: #e4efdb;
+    margin-top: 15%;
+    max-width: 100vw;
+    padding-top: 3%;
+    position: relative;
+    padding-bottom: 5%; /* Added padding for space at the bottom */
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    margin-top: 5%;
+    position: relative;
+}
+
+.socials a {
+    background-color: none;
+}
+
+.socials a:before {
+    background: none;
+}
+
+.socials img {
+    transition: 0.3s;
+    width: 50%;
+    height: auto;
+}
+
+.socials img:hover {
+    opacity: 70%;
+}
+
+#contact-nieuwsbrief {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Rambla", sans-serif;
+    margin-top: 5%;
+    position: relative;
+}
+
+.contactinformatie {
+    margin-left: 5%;
+}
+
+.contactinformatie h1 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.contactinformatie h1 span {
+    font-weight: 600;
+    color: #93b999;
+}
+
+.contactinformatie p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-top: 10%;
+}
+
+.nieuwsbrief {
+    padding: 20px;
+    text-align: center;
+    margin-right: 5%;
+}
+
+.nieuwsbrief h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.nieuwsbrief span {
+    color: #93b999;
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5%;
+}
+
+input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background-color: #71776D;
+    border-radius: 15px;
+    width: 250px;
+}
+
+input[type="email"]::placeholder {
+    color: #ffffff;
+    opacity: 50%;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #93b999;
+    border: none;
+    border-radius: 1.875rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #719176;
+}
+
+#bedrijf-fastlinks {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Rambla", sans-serif;
+    margin-top: 5%;
+    position: relative;
+}
+
+.bedrijf {
+    margin-left: 5%;
+}
+
+.bedrijf h1 {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.bedrijf a {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.25rem;
+    margin-top: 2%;
+    transition: 0.3s;
+}
+
+.bedrijf a:hover {
+    color: #93b999;
+}
+
+.privacy-voorwaarden {
+    margin-top: 10%;
+}
+
+.fastlinks {
+    margin-right: 15%;
+    margin-top: 1%;
+}
+
+.fastlinks a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.5rem;
+    margin-top: 10%;
+    transition: 0.3s;
+}
+
+.fastlinks a:hover {
+    color: #93b999;
+}
+
+/*Contactpage*/
+.plant-contactpage {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-left: 2%;
+}
+
+input {
+    font-family: "Rambla", sans-serif;
+    color: #000000;
+    font-size: 1.25rem;
+    background-color: none;
+    transition: font-size 0.3s ease;
+}
+
+input:focus {
+    font-size: 1rem; /* Smaller font size on focus */
+}
+
+textarea {
+    font-family: "Rambla", sans-serif;
+    color: #000000;
+    font-size: 1.25rem;
+    transition: font-size 0.3s ease;
+}
+
+textarea:focus {
+    font-size: 1rem; /* Smaller font size on focus */
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    pointer-events: none;
+}
+
+.form-control {
+    border: none;
+    border-radius: 0;
+    padding-bottom: 10px;
+    outline: none;
+    text-align: left;
+    width: 100%;
+}
+
+#main-contactpage {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-plaats {
+    margin-right: 43%;
+    margin-top: 4%;
+    font-family: "Rambla", sans-serif;
+}
+
+.contact-plaats h2 {
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.contact-plaats p {
+    font-size: 1.25rem;
+    margin-top: 3%;
+}
+
+.socials-contactpage img {
+    width: 10%;
+    margin-top: 10%;
+    margin-right: 3%;
+    transition: 0.3s;
+}
+
+.socials-contactpage img:hover {
+    opacity: 70%;
+}
+
+.socials-contactpage a:before {
+    background: none;
+}

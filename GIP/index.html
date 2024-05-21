@@ -3,15 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>urban Blooms</title>
+    <title>Urban Blooms</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
 </head>
 <body>
+    <div id="loader-container">
+    <dotlottie-player src="https://lottie.host/bd6875a6-6c8d-4fe3-b8a8-141d556b5257/jL6lZHqb7L.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+    </div>
+    
     <header>
         <nav>
-            
+            <div class="logo">
+                <a href="/index.html"><img src="img/UB Logo.svg" alt="UB Logo"></a>
+            </div>
+            <li>
+            <a href="/index.html" class="nav-links">Home</a>
+            <a href="#over-ons" class="nav-links">Over Ons</a> 
+            <a href="#gallery" class="nav-links">Galerij</a>
+            <a href="/contactpage.html" class="nav-links">Contact</a>
+            </li>
         </nav>
+
+        <div class="landing-page-plant">
+        <img src="img/plant-landingpage.png" alt="Landing Page Plant">
+    </div>
+
+    <div class="header-text">
+        <img src="img/header-title.png" alt="Waar beton bloeit en verbinding groeit">
+        <p>Urban Blooms, de toonaangevende NGO in Brussel, transformeert de stad met bloemen en kunst. Doe mee en help ons Brussel tot bloei te brengen!</p>
+    </div>
+
+    <div class="weetjes">
+        <h2>Waarom zijn bomen essentieel voor steden?</h2>
+        <p>Bomen bieden schaduw, verlagen energiekosten en verhogen de waarde van onroerend goed.</p>
+        <br><br>
+        <h2>Waarom zijn groene ruimtes belangrijk in stedelijke gebieden?</h2>
+        <p>Groene ruimtes verbeteren de luchtkwaliteit, verminderen stress en bevorderen sociale interactie.</p>
+    </div>
     </header>
-    
+    <main>
+        <div class="over-ons" id="over-ons" data-aos="fade-up">
+            <h1>Over <span>Ons</span></h1>
+            <p>Welkom bij Urban Blooms, een non-profitorganisatie. Sinds 2018 transformeren we stedelijke ruimtes in groene oases met bloemen, planten en kunst. Samen met de gemeenschap organiseren we workshops en evenementen om de stad mooier en biodiverser te maken.
+            </p>
+        </div>
+
+        <div class="actionimg" data-aos="fade-up">
+            <img src="img/Word vrijwilliger.jpg" alt="Word vrijwilliger" width="20%">
+            <img src="img/Doneer.jpg" alt="Doneer" width="30%">
+            <img src="img/Onze projecten.jpg" alt="Onze projecten" width="20%">
+        </div>
+        
+        <div id="gallery-wrap" data-aos="fade-up">
+            <div><h1>Gal<span>erij</span></h1></div>
+            <img src="img/Pijl links.png" id="backBtn">
+            <div id="gallery">
+                <div><img src="img/Galerij/Bloem door straat RGB.jpg" alt="Photo 1"></div>
+                <div><img src="img/Galerij/Bloem in regen rgb.jpg" alt="Photo 2"></div>
+                <div><img src="img/Galerij/Licht door raam op plant RGB.jpg" alt="Photo 3"></div>
+                <div><img src="img/Galerij/Bedrijf RGB.jpg" alt="Photo 4"></div>
+                <div><img src="img/Galerij/Bilboard RGB.jpg" alt="Photo 5"></div>
+                <div><img src="img/Galerij/Bloem met schaduw RGB.jpg" alt="Photo 6"></div>
+                <div><img src="img/Galerij/Bloemen aan raam RGB.jpg" alt="Photo 7"></div>
+                <div><img src="img/Galerij/Bloemen in hand RGB.jpg" alt="Photo 8"></div>
+                <div><img src="img/Galerij/Bos RGB.jpg" alt="Photo 9"></div>
+                <div><img src="img/Galerij/Donatie box RGB.jpg" alt="Photo 10"></div>
+                <div><img src="img/Galerij/Groen gebouw RGB.jpg" alt="Photo 11"></div>
+                <div><img src="img/Galerij/Hoodie RGB.jpg" alt="Photo 12"></div>
+                <div><img src="img/Galerij/Logo in aarde RGB.jpg" alt="Photo 13"></div>
+                <div><img src="img/Galerij/Parking RGB.jpg" alt="Photo 14"></div>
+                <div><img src="img/Galerij/Plant op hoop aarde RGB.jpg" alt="Photo 15"></div>
+                <div><img src="img/Galerij/Pratende mensen RGB.jpg" alt="Photo 16"></div>
+                <div><img src="img/Galerij/Struik RGB.jpg" alt="Photo 17"></div>
+                <div><img src="img/Galerij/Urbanblooms auto RGB.jpg" alt="Photo 18"></div>
+                <div><img src="img/Galerij/Urbanblooms tafel RGB.jpg" alt="Photo 19"></div>
+                <div><img src="img/Galerij/Vaas met raam RGB.jpg" alt="Photo 20"></div>
+            </div>
+            <img src="img/Pijl rechts.png" id="nextBtn">
+        </div>
+            
+        <h1 class="video-text" data-aos="fade-up">Video</h1>
+        <div class="video" data-aos="fade-up">
+            <img src="img/Pijl rechts.png" alt="playButton" id="play" class="tap">
+            <video id="player" preload="auto" loop="loop"
+            src="img/Snelle jongen dunne jasje.mp4" type="video/mp4"></video>
+        </div>
+
+    </main>
+    <footer>
+        <div class="socials">
+            <a href="#"><img src="img/instagram.png" alt="instagram"></a>
+            <a href="#"><img src="img/twitter X.png" alt="twitter X"></a>
+            <a href="#"><img src="img/facebook.png" alt="facebook"></a>
+            <a href="#"><img src="img/linkedin.png" alt="linkedin"></a>
+            
+            
+            
+            
+        </div>
+        <section id="contact-nieuwsbrief">
+            <div class="contactinformatie">
+                <h1>Contact<span>informatie</span></h1>
+                <p>
+                    Adres: Hoofdkantoor in Brussel <br>
+                    Telefoonnummer: +32 (0)2 123 4567 <br>
+                    E-mailadres: info@urbanblooms.org
+                </p>
+            </div>
+            <div class="nieuwsbrief">
+                <h1>Meld je aan voor de <span>nieuwsbrief</span></h1>
+                <form>
+                    <input type="email" placeholder="Voer je e-mailadres in" required>
+                    <button type="submit">Aanmelden</button>
+                </form>
+            </div>
+        </section>
+        <section id="bedrijf-fastlinks">
+            <div class="bedrijf">
+                <h1>Bedrijf</h1>
+                <div class="privacy-voorwaarden">
+                    <a href="#">Privacyverklaring</a>
+                    <a href="#">Algemene Voorwaarden</a>
+                </div>
+            </div>
+            <div class="fastlinks">
+                <a href="/index.html">Home</a>
+                <a href="#over-ons">Over Ons</a>
+                <a href="#gallery">Galerij</a>
+                <a href="#">Contact</a>
+            </div>
+        </section>
+    </footer>
 </body>
+<script src="main.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
 </html>

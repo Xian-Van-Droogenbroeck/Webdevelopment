@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Prata&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Prata";
+  max-width: 100%;
+}
+
+header {
+  background: linear-gradient(90deg, rgba(9,9,121,1) 50%, rgba(0,212,255,1) 50%);
+  height: 100vh;
+}
+
+nav {
+  padding-top: 1%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+a {
+  color: #27bcb8;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container-homepage {
+  display: flex;
+}
+
+.hello-title {
+  flex: 1;
+  color: white;
+  margin-left: 14%;
+  margin-top: 9%;
+}
+
+.hello-title h1 {
+  font-size: 9.375rem;
+  font-weight: 400;
+  margin-top: 5%;
+}
+
+.hello-title p {
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+.cactus-img {
+  flex: 1;
+  color: white;
+  margin-top: 5%;
+  margin-right: 9%;
+}
+
+.cactus-img img{
+  width: 70%;
+}
+
+.cactus-img p {
+  margin-left: 14%;
+  margin-top: 2%;
+}
+
+.scroll-down p {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  color: #2864b1;
+  font-size: 1.125rem;
+}
+
+.works {
+  display: flex;
+}
+
+.works h1 {
+  color: #4dc2bd;
+  font-size: 6.25rem;
+  font-weight: 300;
+}
+
+.works .branding-web {
+  font-size: 2rem;
+  color: #16736e;
+  background:#75e3dd;
+  width:  45%;
+  padding-left: 1%;
+}
+
+.works .start {
+  flex: 1;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.works h2 {
+  color: #0e726f;
+  font-size: 3.125rem;
+  font-weight: 300;
+  margin-bottom: 3%;
+}
+
+.works .description {
+  color: #0e726f;
+  margin-bottom: 5%;
+}
+
+.works a {
+  color: #53c3c4;
+  font-size: 1.125rem;
+  font-family: "Inconsolata";
+}
+
+.works .end {
+  flex: 1;
+  margin-top: 23%;
+}
+
+.healthy-dining {
+  display: flex;
+}
+
+.healthy-dining .branding-mobile {
+  font-size: 2rem;
+  color: #16736e;
+  background:#75e3dd;
+  width:  52%;
+  text-align: end;
+}
+
+.healthy-dining .start {
+  flex: 1;
+  margin-right: 4%;
+  margin-top: 8%;
+  text-align: end;
+}
+
+.healthy-dining h2 {
+  color: #0e726f;
+  font-size: 3.125rem;
+  font-weight: 300;
+  margin-bottom: 3%;
+}
+
+.healthy-dining .description {
+  color: #0e726f;
+  margin-bottom: 5%;
+}
+
+.healthy-dining a {
+  color: #53c3c4;
+  font-size: 1.125rem;
+  font-family: "Inconsolata";
+}
+
+.healthy-dining .end {
+  flex: 1;
+  margin-right: 5%;
+}
+
+.works .start-3 {
+  flex: 1;
+  margin-left: 10%;
+}
+
+.works .end-3 {
+  flex: 1;
+  margin-top: 10%;
+}
+
+.my-team {
+  display: flex;
+}
+
+.images {
+  flex: 1;
+  margin-left: 10%;
+}
+
+.images img {
+  width: 90%;
+  margin-top: 3%;
+}
+
+.images h1 {
+  color: #003170;
+  font-size: 6.25rem;
+  font-weight: 300;
+}
+
+.how-we-start {
+  flex: 1;
+  margin-right: 3%;
+  margin-top: 11%;
+}
+
+.how-we-start h2 {
+  color: #306fbf;
+  font-size: 3.125rem;
+  font-weight: 300;
+}
+
+.how-we-start p {
+  color: #444355;
+  font-size: 0.875rem;
+  width: 80%;
+}
+
+.contact {
+  display: flex;
+}
+
+.contact .data {
+  flex: 1;
+  margin-left: 15%;
+}
+
+.contact .data p {
+  font-family: "Inconsolata";
+}
+
+.contact .fat-text p {
+  font-weight: 700;
+}
+
+.images-contact {
+  flex: 1;
+  display: flex;
+  margin-right: 10%;
+  margin-top: 10%;
+}
+
+.images-contact img {
+  width: 50%;
+  margin-right: 5%;
+}
+
+.contact h1 {
+  color: #f3747b;
+  font-size: 100px;
+}
+
+footer {
+  background-color: #f5979c;
+  background-image: url("/img/socialmedia.svg");
+  margin-top: 3%;
+}
+
+footer .icons {
+  display: flex;
+  justify-content: center;
+  padding-top: 3%;
+  gap: 30px;
+}
+footer .icons img {
+  width: 4%;
+}
+
+footer p {
+  color: white;
+  margin-top: 3%;
+  margin-left: 10%;
+  padding-bottom: 1%;
+}
