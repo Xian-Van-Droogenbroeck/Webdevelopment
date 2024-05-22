@@ -33,8 +33,12 @@ header {
     height: 100vh;
 }
 
-/*The Right-to-Left Color Swap Link Hover Effect*/
 a {
+    text-decoration: none;
+}
+
+/*The Right-to-Left Color Swap Link Hover Effect*/
+.navbar-links a {
     background-image: linear-gradient(
       to right,
       #719176,
@@ -50,7 +54,7 @@ a {
     transition: all 0.3s ease-in-out;
   }
   
-  a:before{
+  .navbar-links a:before{
     content: '';
     background: #719176;
     display: block;
@@ -62,11 +66,11 @@ a {
     transition: all 0.3s ease-in-out;
   }
   
-  a:hover {
+  .navbar-links a:hover {
    background-position: 0;
   }
   
-  a:hover::before{
+  .navbar-links a:hover::before{
     width: 100%;
   }
 
@@ -89,7 +93,7 @@ nav a {
     text-decoration: none;
     color: #93b999;
     font-size: 1.5rem;
-    margin-left: 1.25rem;
+    margin-left: 20px;
     transition: 0.3s;
 }
 
@@ -109,6 +113,37 @@ nav a:hover {
 
 .logo a:before {
     background: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.line-hamburger {
+    width: 48px;
+    height: 6px;
+    background-color: #e4efdb;
+    border-radius: 30px;
+    margin: 12px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-links {
+    display: flex;
+    margin-right: 3%;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: #93b999;
+    font-size: 1.5rem;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.nav-links:hover {
+    color: #e4efdb;
 }
 
 .landing-page-plant {
@@ -193,24 +228,79 @@ nav a:hover {
     width: 83.5%;
 }
 
-.actionimg {
+/*Cards*/
+.card-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 10%;
     margin-top: 10%;
 }
 
-.actionimg img {
-    margin-left: 2%;
-    margin-right: 2%;
+.card {
+    font-family: "Rambla", sans-serif;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 20%;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h2 {
+    margin: 20px 0 10px;
+    font-size: 1.5rem;
+    margin-left: 5%;
+    color: #93b999;
+    font-weight: 300;
+}
+
+.card span {
+    font-weight: 600;
+}
+
+.card p {
+    margin-left: 5%;
+    width: 90%;
+    color: #4F4F4F;
+    font-size: 1rem;
+}
+
+.card-button {
+    margin: 5%;
+    margin-left: 10%;
+    padding: 20px 20px;
+    border-radius: 15px;
+    border: none;
+    background-color: #93b999;
+    color: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
     transition: 0.3s;
+    font-size: 1rem;
+    width: 80%;
 }
 
-.actionimg img:hover {
-    transform: scale(1.1,1.1);
+.card-button a {
+    color: #ffffff;
 }
 
-/* GALERIJ */
+.card-button a:before {
+    background: none;
+}
+
+span .card-button {
+    margin-top: 9%;
+}
+
+.card-button:hover {
+    background-color: #719176;
+}
+
+/*GALERIJ*/
 #gallery-wrap {
     margin-top: 20%;
     display: flex;
@@ -245,11 +335,11 @@ nav a:hover {
     display: flex;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    width: calc(100% - 100px); /* Adjust to leave space for buttons */
+    width: calc(100% - 100px);
 }
 
 #gallery div {
-    min-width: calc((100% - 100px) / 3); /* Adjust to display 3 images at a time */
+    min-width: calc((100% - 100px) / 3); /*Hoeveel foto's*/
     margin-left: 5%;
     margin-top: auto;
     margin-bottom: auto;
@@ -262,11 +352,11 @@ nav a:hover {
 }
 
 #gallery img.middle {
-    transform: scale(1.1); /* Scale the middle image slightly larger */
+    transform: scale(1.1);
 }
 
 #gallery::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */
+    display: none;
 }
 
 /*Video*/
@@ -307,7 +397,7 @@ footer {
     max-width: 100vw;
     padding-top: 3%;
     position: relative;
-    padding-bottom: 5%; /* Added padding for space at the bottom */
+    padding-bottom: 5%;
 }
 
 .socials {
@@ -405,11 +495,11 @@ input[type="email"]::placeholder {
 
 button {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 1rem;
     color: #ffffff;
     background-color: #93b999;
     border: none;
-    border-radius: 1.875rem;
+    border-radius: 30px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -441,12 +531,43 @@ button:hover {
     color: #000000;
     font-size: 1.25rem;
     margin-top: 2%;
-    transition: 0.3s;
 }
 
-.bedrijf a:hover {
-    color: #93b999;
-}
+.bedrijf a {
+    background-image: linear-gradient(
+      to right,
+      #719176,
+      #719176 50%,
+      #93b999 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .bedrijf a:before{
+    content: '';
+    background: #719176;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .bedrijf a:hover {
+   background-position: 0;
+  }
+  
+  .bedrijf a:hover::before{
+    width: 100%;
+  }
 
 .privacy-voorwaarden {
     margin-top: 10%;
@@ -464,12 +585,43 @@ button:hover {
     color: #000000;
     font-size: 1.5rem;
     margin-top: 10%;
-    transition: 0.3s;
 }
 
-.fastlinks a:hover {
-    color: #93b999;
-}
+.fastlinks a {
+    background-image: linear-gradient(
+      to right,
+      #719176,
+      #719176 50%,
+      #93b999 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .fastlinks a:before{
+    content: '';
+    background: #719176;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .fastlinks a:hover {
+   background-position: 0;
+  }
+  
+  .fastlinks a:hover::before{
+    width: 100%;
+  }
 
 /*Contactpage*/
 .plant-contactpage {
@@ -495,7 +647,7 @@ input {
 }
 
 input:focus {
-    font-size: 1rem; /* Smaller font size on focus */
+    font-size: 1rem;
 }
 
 textarea {
@@ -506,7 +658,7 @@ textarea {
 }
 
 textarea:focus {
-    font-size: 1rem; /* Smaller font size on focus */
+    font-size: 1rem;
 }
 
 .form-group {
@@ -520,7 +672,7 @@ textarea:focus {
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: black;
+    background-color: #000000;
     pointer-events: none;
 }
 
@@ -531,6 +683,12 @@ textarea:focus {
     outline: none;
     text-align: left;
     width: 100%;
+}
+
+.form-group button {
+    background-color: #e4efdb;
+    color: #000000;
+    margin-left: 25%;
 }
 
 #main-contactpage {
@@ -567,4 +725,366 @@ textarea:focus {
 
 .socials-contactpage a:before {
     background: none;
+}
+
+/*Laptop*/
+@media only screen and (max-width: 1300px) {
+    .logo {
+        width: 30%;
+    }
+
+    nav li {
+        font-size: 1rem;
+    }
+
+    .header-text img {
+        width: 30%;
+    }
+
+    .header-text p {
+        font-size: 1.125rem;
+        width: 30%;
+    }
+
+    .weetjes {
+        margin-top: -7%;
+    }
+
+    .weetjes h2 {
+        font-size: 1rem;
+    }
+
+    .weetjes p {
+        font-size: 0.875rem;
+        width: 90%;
+    }
+
+    .over-ons {
+        margin-top: 0%;
+    }
+
+    .over-ons h1 {
+        font-size: 1.875rem;
+    }
+
+    .over-ons p {
+        font-size: 1.5rem;
+    }
+
+    .video-text {
+        font-size: 1.875rem;
+        margin-left: 10%;
+        margin-top: 6%;
+    }
+
+    .video video {
+        width: 30%;
+        margin-top: 5%;
+    }
+
+    .socials {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-plaats {
+        margin-right: 20%;
+        margin-top: 4%;
+        font-family: "Rambla", sans-serif;
+    }
+
+    .contact-plaats h2 {
+        font-size: 1.25rem;
+    }
+    
+    .contact-plaats p {
+        font-size: 1rem;
+        margin-top: 1%;
+    }
+    
+    .socials-contactpage img {
+        width: 7%;
+        margin-top: 5%;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+    
+    input:focus {
+        font-size: 0.8125rem;
+    }
+    
+    textarea {
+        font-size: 1rem;
+    }
+    
+    textarea:focus {
+        font-size: 0.8125rem;
+    }
+
+    .plant-contactpage {
+        width: 30%;
+    }
+}
+
+/*Tablet*/
+@media only screen and (max-width: 834px) {
+    .logo {
+        width: 40%;
+        margin-top: 3%;
+    }
+    .landing-page-plant{
+        right: 10%;
+    }
+
+    .header-text img {
+        margin-left: 5%;
+        width: 40%;
+    }
+
+    .header-text p {
+        margin-left: 5%;
+        margin-top: 5%;
+        width: 50%;
+        font-size: 1.25rem;
+    }
+
+    /*Hamburger*/
+    .navbar-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        margin-right: 3%;
+    }
+
+    nav.active .line-hamburger:nth-child(1) {
+        transform: rotate(-45deg) translate(-19px, 6px);
+    }
+
+    nav.active .line-hamburger:nth-child(2) {
+        opacity: 0;
+    }
+
+    nav.active .line-hamburger:nth-child(3) {
+        transform: rotate(45deg) translate(-19px, -6px);
+    }
+
+    nav.active .navbar-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #f9f9f9;
+        width: 100vw;
+        height: 100vh;
+        padding: 20px;
+    }
+
+    .nav-links {
+        margin: 10px 0;
+    }
+
+    .weetjes {
+        display: none;
+    }
+
+    /*Cards*/
+    .card-container {
+        display: block;
+        gap: 2%;
+        margin-top: 3%;
+    }
+
+    .card {
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2%;
+    }
+
+    .card-button {
+        padding: 15px 20px;
+        margin-top: 20%;
+    }
+
+    span .card-button {
+        margin-top: 30%;
+    }
+
+    /*Galerij*/
+    #gallery-wrap h1 {
+        display: none;
+    }
+
+    #gallery div { /*Moet nog aan gewerkt worden...*/
+        min-width: calc((100% - 100px) / 1);
+        margin-left: 30%;
+    }
+
+    /*Video*/
+    #play {
+        top: 60%;
+    }
+
+    /*Footer*/
+    .fastlinks {
+        display: none;
+    }
+
+    #bedrijf-fastlinks {
+        justify-content: flex-end;
+        text-align: right;
+        margin-right: 10%;
+    }
+
+    /*Contactpage*/
+    .contact-plaats {
+        margin-right: -15%;
+    }
+
+    .contactForm {
+        margin-left: 10%;
+    }
+
+    .plant-contactpage {
+        width: 50%;
+    }
+}
+
+/*Gsm*/
+@media only screen and (max-width: 393px) {
+    header {
+        height: 50vh;
+    }
+
+    /*Hamburger*/
+    .line-hamburger {
+        width: 29px;
+        height: 3.63px;
+        margin: 7px 0;
+    }
+
+    .logo {
+        margin-left: -2%;
+    }
+
+    .landing-page-plant {
+        display: none;
+    }
+
+    .header-text img {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10%;
+        width: 60%;
+    }
+
+    .header-text p {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10%;
+        text-align: center;
+        width: 80%;
+    }
+
+    .over-ons {
+        margin-top: 0%;
+    }
+
+    .over-ons h1 {
+        font-size: 1.5rem;
+    }
+
+    .over-ons p {
+        font-size: 0.875rem;
+        margin-top: 5%;
+    }
+
+    /*Cards*/
+    .card-container {
+        margin-top: 10%;
+    }
+    
+    .card {
+        width: 70%;
+    }
+
+    /*Galerij*/
+    #gallery-wrap {
+        max-width: 100%;
+        margin-left: 13%;
+    }
+
+    #gallery div {
+        margin-left: 40%;
+    }
+
+    /*Video*/
+    #play {
+        width: 5%;
+    }
+
+    #player {
+        width: 85%;
+        margin-top: 10%;
+    }
+
+    .video-text {
+        font-size: 1.5rem;
+        margin-left: 6%;
+        margin-top: 15%;
+    }
+
+    /*Footer*/
+    .socials img {
+        width: 100%;
+    }
+
+    #contact-nieuwsbrief {
+        display: block;
+    }
+
+    .contactinformatie {
+        text-align: center;
+    }
+
+    .contactinformatie h1 {
+        font-size: 1.5rem;
+    }
+
+    .contactinformatie p {
+        font-size: 1rem;
+        margin-top: 5%;
+    }
+
+    .nieuwsbrief {
+        margin-top: 5%;
+    }
+
+    .nieuwsbrief h1 {
+        font-size: 1.5rem;
+    }
+
+    #bedrijf-fastlinks {
+        justify-content: center;
+    }
+
+    .bedrijf {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .bedrijf h1 {
+        font-size: 1.5rem;
+    }
+
+    .bedrijf a {
+        font-size: 1rem;
+    }
 }

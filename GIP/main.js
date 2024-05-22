@@ -149,3 +149,13 @@ document.querySelectorAll('.form-control').forEach(input => {
         input.setAttribute('placeholder', placeholder);
     });
 });
+
+/*Hamburger*/
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.navbar-links');
+
+    hamburger.addEventListener('click', function () {
+        navLinks.parentElement.classList.toggle('active');
+    });
+});
