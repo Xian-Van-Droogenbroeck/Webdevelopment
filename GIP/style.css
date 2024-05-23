@@ -148,10 +148,10 @@ nav a:hover {
 
 .landing-page-plant {
     position: fixed;
-    top: 0;
-    right: 30%;
+    bottom: 0;
+    right: 10%;
     width: auto;
-    height: 100vh;
+    height: 85vh;
     z-index: -1;
 }
 
@@ -161,45 +161,17 @@ nav a:hover {
 }
 
 .header-text img {
-    margin-left: 2%;
+    margin-left: 3%;
     margin-top: 5%;
 }
 
 .header-text p {
     margin-top: 2%;
-    margin-left: 2%;
+    margin-left: 3%;
     font-family: "Rambla", sans-serif;
     font-size: 1.25rem;
     width: 40%;
     color: #93b999;
-}
-
-.weetjes {
-    color: #93b999;
-    font-family: "Rambla", sans-serif;
-    margin-left: 75%;
-    margin-top: 5%;
-}
-
-.weetjes h2 {
-    font-weight: 600;
-    font-size: 1.25rem;
-    width: 80%;
-    transition: 0.5s;
-}
-
-.weetjes p {
-    font-size: 1rem;
-    width: 70%;
-    transition: 0.5s;
-}
-
-.weetjes h2:hover {
-    color: #e4efdb;
-}
-
-.weetjes p:hover {
-    color: #e4efdb;
 }
 
 .over-ons {
@@ -211,6 +183,7 @@ nav a:hover {
     font-weight: 300;
     font-size: 2.5rem;
     margin-left: 5.5%;
+    color: #93b999;
 }
 
 .over-ons h1 span {
@@ -223,7 +196,7 @@ nav a:hover {
     margin-left: auto;
     margin-right: auto;
     margin-top: 3%;
-    color: #5F5F5F;
+    color: #BFE5C4;
     font-size: 2rem;
     width: 83.5%;
 }
@@ -265,7 +238,7 @@ nav a:hover {
 .card p {
     margin-left: 5%;
     width: 90%;
-    color: #4F4F4F;
+    color: #93b999;
     font-size: 1rem;
 }
 
@@ -300,65 +273,6 @@ span .card-button {
     background-color: #719176;
 }
 
-/*GALERIJ*/
-#gallery-wrap {
-    margin-top: 20%;
-    display: flex;
-    align-items: center;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-}
-
-#gallery-wrap h1 {
-    position: absolute;
-    top: 270%;
-    margin-left: 2%;
-    font-family: "Rambla", sans-serif;
-    font-weight: 300;
-    font-size: 2.5rem;
-}
-
-#gallery-wrap h1 span {
-    font-weight: 600;
-    font-weight: 600;
-}
-
-#backBtn, #nextBtn {
-    cursor: pointer;
-    width: 2%;
-    height: auto;
-}
-
-#gallery {
-    display: flex;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    width: calc(100% - 100px);
-}
-
-#gallery div {
-    min-width: calc((100% - 100px) / 3); /*Hoeveel foto's*/
-    margin-left: 5%;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-#gallery img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-#gallery img.middle {
-    transform: scale(1.1);
-}
-
-#gallery::-webkit-scrollbar {
-    display: none;
-}
-
 /*Video*/
 #play {
     position: absolute;
@@ -387,7 +301,7 @@ span .card-button {
     font-weight: 300;
     font-size: 2.5rem;
     margin-left: 5.5%;
-    margin-top: 15%;
+    color: #93b999;
 }
 
 /*Footer*/
@@ -398,6 +312,7 @@ footer {
     padding-top: 3%;
     position: relative;
     padding-bottom: 5%;
+    color: #93b999;
 }
 
 .socials {
@@ -445,7 +360,6 @@ footer {
 
 .contactinformatie h1 span {
     font-weight: 600;
-    color: #93b999;
 }
 
 .contactinformatie p {
@@ -467,7 +381,6 @@ footer {
 }
 
 .nieuwsbrief span {
-    color: #93b999;
     font-weight: 600;
 }
 
@@ -640,7 +553,7 @@ button:hover {
 
 input {
     font-family: "Rambla", sans-serif;
-    color: #000000;
+    color: #93b999;
     font-size: 1.25rem;
     background-color: none;
     transition: font-size 0.3s ease;
@@ -652,7 +565,7 @@ input:focus {
 
 textarea {
     font-family: "Rambla", sans-serif;
-    color: #000000;
+    color: #93b999;
     font-size: 1.25rem;
     transition: font-size 0.3s ease;
 }
@@ -672,7 +585,7 @@ textarea:focus {
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: #000000;
+    background-color: #93b999;
     pointer-events: none;
 }
 
@@ -687,13 +600,18 @@ textarea:focus {
 
 .form-group button {
     background-color: #e4efdb;
-    color: #000000;
+    color: #93b999;
     margin-left: 25%;
+}
+
+.form-group button:hover {
+    background-color: #c7d6b9;
 }
 
 #main-contactpage {
     display: flex;
     justify-content: space-between;
+    color: #93b999;
 }
 
 .contact-plaats {
@@ -727,6 +645,69 @@ textarea:focus {
     background: none;
 }
 
+/*Gallerypage*/
+.header-gallerypage {
+    height: 30vh;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.gallery div {
+    flex: 0 0 auto;
+    position: relative;
+}
+
+.gallery img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s, top 0.2s, left 0.2s;
+    position: relative;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /*Laptop*/
 @media only screen and (max-width: 1300px) {
     .logo {
@@ -744,19 +725,6 @@ textarea:focus {
     .header-text p {
         font-size: 1.125rem;
         width: 30%;
-    }
-
-    .weetjes {
-        margin-top: -7%;
-    }
-
-    .weetjes h2 {
-        font-size: 1rem;
-    }
-
-    .weetjes p {
-        font-size: 0.875rem;
-        width: 90%;
     }
 
     .over-ons {
@@ -813,6 +781,7 @@ textarea:focus {
     }
 
     input {
+        color: #93b999;
         font-size: 1rem;
     }
     
@@ -821,6 +790,7 @@ textarea:focus {
     }
     
     textarea {
+        color: #93b999;
         font-size: 1rem;
     }
     
@@ -887,14 +857,12 @@ textarea:focus {
         width: 100vw;
         height: 100vh;
         padding: 20px;
+        z-index: 99999;
     }
 
     .nav-links {
         margin: 10px 0;
-    }
-
-    .weetjes {
-        display: none;
+        z-index: 99999;
     }
 
     /*Cards*/
@@ -918,16 +886,6 @@ textarea:focus {
 
     span .card-button {
         margin-top: 30%;
-    }
-
-    /*Galerij*/
-    #gallery-wrap h1 {
-        display: none;
-    }
-
-    #gallery div { /*Moet nog aan gewerkt worden...*/
-        min-width: calc((100% - 100px) / 1);
-        margin-left: 30%;
     }
 
     /*Video*/
@@ -1017,16 +975,6 @@ textarea:focus {
     
     .card {
         width: 70%;
-    }
-
-    /*Galerij*/
-    #gallery-wrap {
-        max-width: 100%;
-        margin-left: 13%;
-    }
-
-    #gallery div {
-        margin-left: 40%;
     }
 
     /*Video*/

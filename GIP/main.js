@@ -18,110 +18,42 @@ document.addEventListener('scroll', function() {
 });
 
 /*Gallery*/
-const gallery = document.getElementById('gallery');
-const items = gallery.querySelectorAll('div');
-const itemWidth = items[0].offsetWidth + 20;
-const pairWidth = itemWidth * 1;
+document.addEventListener("DOMContentLoaded", function() {
+    const gallery = document.querySelectorAll('.gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.close');
 
-function updateMiddle() {
-    const scrollLeft = gallery.scrollLeft;
-    const galleryWidth = gallery.offsetWidth;
-    const middleIndex = Math.floor((scrollLeft + galleryWidth / 2) / itemWidth);
+    gallery.forEach(img => {
+        img.addEventListener('click', function() {
+            lightbox.style.display = 'block';
+            lightboxImg.src = this.src;
+        });
 
-    items.forEach((item, index) => {
-        if (index === middleIndex) {
-            item.querySelector('img').classList.add('middle');
-        } else {
-            item.querySelector('img').classList.remove('middle');
+        img.addEventListener('mousemove', function(e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            // Making the movement faster and less effective
+            this.style.transform = `translate(${(x - rect.width / 2) / 20}px, ${(y - rect.height / 2) / 20}px)`;
+        });
+
+        img.addEventListener('mouseleave', function() {
+            this.style.transform = 'translate(0, 0)';
+        });
+    });
+
+    closeBtn.addEventListener('click', function() {
+        lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', function(e) {
+        if (e.target !== lightboxImg) {
+            lightbox.style.display = 'none';
         }
     });
-}
-
-updateMiddle();
-gallery.addEventListener('scroll', updateMiddle);
-
-document.getElementById('backBtn').addEventListener('click', function() {
-    let targetScroll = gallery.scrollLeft - pairWidth;
-    if (targetScroll < 0) {
-        targetScroll = gallery.scrollWidth - gallery.offsetWidth;
-    }
-    gallery.scrollTo({
-        left: targetScroll,
-        behavior: 'smooth'
-    });
 });
-
-document.getElementById('nextBtn').addEventListener('click', function() {
-    let targetScroll = gallery.scrollLeft + pairWidth;
-    if (targetScroll >= gallery.scrollWidth - gallery.offsetWidth) {
-        targetScroll = 0;
-    }
-    gallery.scrollTo({
-        left: targetScroll,
-        behavior: 'smooth'
-    });
-});
-
-const images = document.querySelectorAll('#gallery img');
-
-// Set individual sizes for each image
-images[0].style.width = '50%';
-
-images[1].style.width = '70%';
-
-images[2].style.width = '50%';
-
-images[3].style.width = '100%';
-images[3].style.margin ='0 -30%';
-
-images[4].style.width = '100%';
-images[4].style.margin ='0 -30%';
-
-images[5].style.width = '60%';
-images[5].style.margin ='0 -50%';
-
-images[6].style.width = '60%';
-images[6].style.margin ='0 -70%';
-
-images[7].style.width = '100%';
-images[7].style.margin ='0 -90%';
-
-images[8].style.width = '100%';
-images[8].style.margin ='0 -90%';
-
-images[9].style.width = '50%';
-images[9].style.margin ='0 -90%';
-
-images[10].style.width = '100%';
-images[10].style.margin ='0 -140%';
-
-images[11].style.width = '100%';
-images[11].style.margin ='0 -130%';
-
-images[12].style.width = '100%';
-images[12].style.margin ='0 -130%';
-
-images[13].style.width = '100%';
-images[13].style.margin ='0 -130%';
-
-images[14].style.width = '100%';
-images[14].style.margin ='0 -130%';
-
-images[15].style.width = '100%';
-images[15].style.margin ='0 -130%';
-
-images[16].style.width = '100%';
-images[16].style.margin ='0 -150%';
-
-images[17].style.width = '100%';
-images[17].style.margin ='0 -160%';
-
-images[18].style.width = '100%';
-images[18].style.margin ='0 -160%';
-
-images[19].style.width = '60%';
-images[19].style.margin ='0 -160%';
-
 
 /*Video afspelen*/
 window.onload = function(){
