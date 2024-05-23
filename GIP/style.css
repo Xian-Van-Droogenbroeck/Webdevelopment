@@ -771,6 +771,10 @@ textarea:focus {
         font-size: 1.5rem;
     }
 
+    #play {
+        top: 60%;
+    }
+
     .video-text {
         font-size: 1.875rem;
         margin-left: 10%;
