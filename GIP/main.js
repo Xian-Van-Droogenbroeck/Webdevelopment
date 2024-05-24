@@ -86,8 +86,14 @@ document.querySelectorAll('.form-control').forEach(input => {
 document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.navbar-links');
+    const body = document.body; // Reference to the body element
 
     hamburger.addEventListener('click', function () {
-        navLinks.parentElement.classList.toggle('active');
+        const isActive = navLinks.parentElement.classList.toggle('active');
+        if (isActive) {
+            body.classList.add('no-scroll'); // Disable scrolling
+        } else {
+            body.classList.remove('no-scroll'); // Enable scrolling
+        }
     });
 });
