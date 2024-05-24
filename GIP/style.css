@@ -130,20 +130,31 @@ nav a:hover {
 }
 
 .navbar-links {
-    display: flex;
-    margin-right: 3%;
+    display: none;
+    flex-direction: column;
 }
 
 .nav-links {
+    margin: 10px 0;
+    font-size: 24px;
     text-decoration: none;
-    color: #93b999;
-    font-size: 1.5rem;
-    margin-left: 20px;
-    transition: color 0.3s;
+    color: #333;
+    opacity: 0;
 }
 
 .nav-links:hover {
     color: #e4efdb;
+}
+
+@keyframes revealLinks {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .landing-page-plant {
@@ -548,7 +559,6 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    margin-left: 2%;
 }
 
 input {
@@ -610,14 +620,20 @@ textarea:focus {
 
 #main-contactpage {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin-left: 10%;
     color: #93b999;
 }
 
 .contact-plaats {
-    margin-right: 43%;
     margin-top: 4%;
+    margin-left: 5%;
     font-family: "Rambla", sans-serif;
+    width: 30%;
+}
+
+.contact-contactpage {
+    margin-bottom: 30%;
 }
 
 .contact-plaats h2 {
@@ -631,7 +647,7 @@ textarea:focus {
 }
 
 .socials-contactpage img {
-    width: 10%;
+    width: 100%;
     margin-top: 10%;
     margin-right: 3%;
     transition: 0.3s;
@@ -761,7 +777,6 @@ textarea:focus {
     }
 
     .contact-plaats {
-        margin-right: 20%;
         margin-top: 4%;
         font-family: "Rambla", sans-serif;
     }
@@ -833,6 +848,7 @@ textarea:focus {
     .hamburger {
         display: block;
         margin-right: 3%;
+        z-index: 5;
     }
 
     nav.active .line-hamburger:nth-child(1) {
@@ -860,9 +876,120 @@ textarea:focus {
         z-index: 99999;
     }
 
+    nav.active .navbar-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #f9f9f9;
+        width: 100vw;
+        height: 100vh;
+        padding: 20px;
+        z-index: 99999;
+        align-items: center; /* Center the nav links */
+        justify-content: center; /* Center the nav links */
+    }
+    
     .nav-links {
         margin: 10px 0;
+        font-size: 24px;
+        text-decoration: none;
+        color: #333;
+        opacity: 0;
+        text-align: center; /* Center text within nav links */
+    }
+
+    .background-overlay {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f9f9f9;
+        z-index: 2;
+        animation: slideDown 0.5s ease forwards;
+    }
+    
+    @keyframes slideDown {
+        from {
+            height: 0;
+        }
+        to {
+            height: 100%;
+        }
+    }
+    
+    nav.active .background-overlay {
+        display: block;
+    }
+    
+    nav.active .navbar-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 20px;
         z-index: 99999;
+        align-items: center;
+        justify-content: center;
+        animation: none;
+        opacity: 0;
+        animation: revealLinks 0.5s ease forwards;
+        animation-delay: 0.5s;
+    }
+    
+    .nav-links {
+        margin: 10px 0;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: #333;
+        opacity: 0;
+        text-align: center;
+        animation: linkFadeIn 0.3s ease forwards;
+        animation-delay: 0.7s;
+    }
+    
+    @keyframes revealLinks {
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes linkFadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    nav.active .nav-links:nth-child(1) {
+        animation-delay: 0.7s;
+    }
+    
+    nav.active .nav-links:nth-child(2) {
+        animation-delay: 0.8s;
+    }
+    
+    nav.active .nav-links:nth-child(3) {
+        animation-delay: 0.9s;
+    }
+    
+    nav.active .nav-links:nth-child(4) {
+        animation-delay: 1s;
+    }
+
+    .nav-links {
+        margin: 10px 0;
+        z-index: 10;
     }
 
     /*Cards*/
@@ -905,8 +1032,12 @@ textarea:focus {
     }
 
     /*Contactpage*/
+    #main-contactpage {
+        margin-left: 0%;
+    }
+
     .contact-plaats {
-        margin-right: -15%;
+        margin-right: 0%;
     }
 
     .contactForm {
@@ -914,16 +1045,16 @@ textarea:focus {
     }
 
     .plant-contactpage {
-        width: 50%;
+        width: 30%;
+    }
+
+    .form-group {
+        margin-bottom: 0%;
     }
 }
 
 /*Gsm*/
 @media only screen and (max-width: 393px) {
-    header {
-        height: 50vh;
-    }
-
     /*Hamburger*/
     .line-hamburger {
         width: 29px;
@@ -1038,5 +1169,39 @@ textarea:focus {
 
     .bedrijf a {
         font-size: 1rem;
+    }
+
+    /*Contactpage*/
+    .header-contactpage {
+        height: 100vh;
+    }
+
+    .plant-contactpage {
+        width: 50%;
+    }
+
+    .contactForm input {
+        font-size: 0.75rem;
+    }
+
+    .contactForm textarea {
+        font-size: 0.75rem;
+    }
+
+    .line {
+        width: 80%;
+    }
+
+    .contact-plaats h2 {
+        font-size: 0.9375rem;
+    }
+
+    .contact-plaats p {
+        font-size: 0.75rem;
+    }
+
+    .form-group button {
+        font-size: 0.75rem;
+        margin-left: 5%;
     }
 }
