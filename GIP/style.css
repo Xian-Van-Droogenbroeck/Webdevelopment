@@ -231,6 +231,11 @@ nav a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     width: 20%;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05, 1.05);
 }
 
 .card img {
