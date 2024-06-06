@@ -29,29 +29,44 @@
         </nav>
     </header>
     <main>
-        <div class="gallery">
-                <div data-aos="fade-up"><img src="img/Galerij/Bloem door straat RGB.jpg" alt="Photo 1"></div>
-                <div data-aos="fade-up"><img src="img/Galerij/Bloem in regen rgb.jpg" alt="Photo 2"></div>
-                <div data-aos="fade-up"><img src="img/Galerij/Licht door raam op plant RGB.jpg" alt="Photo 3"></div>
-                <div data-aos="fade-up"><img src="img/Galerij/Bedrijf RGB.jpg" alt="Photo 4"></div>
-                <div data-aos="fade-up"><img src="img/Galerij/Bilboard RGB.jpg" alt="Photo 5"></div>
-                <div data-aos="fade-up"><img src="img/Galerij/Bloem met schaduw RGB.jpg" alt="Photo 6"></div>
-                <div data-aos="fade-up"><img src="img/Galerij/Bloemen aan raam RGB.jpg" alt="Photo 7"></div>
-                <div data-aos="fade-up"><img src="img/Galerij/Bloemen in hand RGB.jpg" alt="Photo 8"></div>
-                <div data-aos="fade-up"><img src="img/Galerij/Bos RGB.jpg" alt="Photo 9"></div>
-                <div data-aos="fade-up"><img src="img/Galerij/Donatie box RGB.jpg" alt="Photo 10"></div>
-                <div data-aos="fade-up"><img src="img/Galerij/Groen gebouw RGB.jpg" alt="Photo 11"></div>
-                <div data-aos="fade-up"><img src="img/Galerij/Hoodie RGB.jpg" alt="Photo 12"></div>
-                <div data-aos="fade-up"><img src="img/Galerij/Logo in aarde RGB.jpg" alt="Photo 13"></div>
-                <div data-aos="fade-up"><img src="img/Galerij/Parking RGB.jpg" alt="Photo 14"></div>
-                <div data-aos="fade-up"><img src="img/Galerij/Plant op hoop aarde RGB.jpg" alt="Photo 15"></div>
-                <div data-aos="fade-up"><img src="img/Galerij/Pratende mensen RGB.jpg" alt="Photo 16"></div>
-                <div data-aos="fade-up"><img src="img/Galerij/Struik RGB.jpg" alt="Photo 17"></div>
-                <div data-aos="fade-up"><img src="img/Galerij/Urbanblooms auto RGB.jpg" alt="Photo 18"></div>
-                <div data-aos="fade-up"><img src="img/Galerij/Urbanblooms tafel RGB.jpg" alt="Photo 19"></div>
-                <div data-aos="fade-up"><img src="img/Galerij/Vaas met raam RGB.jpg" alt="Photo 20"></div>
+        <div class="filter-container">
+            <input type="text" id="filterInput" placeholder="Type to filter...">
+            <div class="filter-buttons">
+                <button data-filter="alles">Alles</button>
+                <button data-filter="beeld">Beeld</button>
+                <button data-filter="grafisch">Grafisch</button>
             </div>
-
+            <ul id="itemsList" class="gallery">
+                <li data-category="beeld" data-keywords="bloem openbaar straat"><div><img src="img/Galerij/Bloem door straat RGB.jpg" alt="Photo 1"></div></li>
+                <li data-category="beeld" data-keywords="bloem water regen druppels"><div><img src="img/Galerij/Bloem in regen rgb.jpg" alt="Photo 2"></div></li>
+                <li data-category="beeld" data-keywords="plant interieur binnen licht"><div><img src="img/Galerij/Licht door raam op plant RGB.jpg" alt="Photo 3"></div></li>
+                <li data-category="beeld" data-keywords="bedrijf gebouw"><div><img src="img/Galerij/Bedrijf RGB.jpg" alt="Photo 4"></div></li>
+                <li data-category="beeld" data-keywords="bedrijf billboard reclame advertentie"><div><img src="img/Galerij/Bilboard RGB.jpg" alt="Photo 5"></div></li>
+                <li data-category="beeld" data-keywords="bloem schaduw interieur binnen pot bloempot"><div><img src="img/Galerij/Bloem met schaduw RGB.jpg" alt="Photo 6"></div></li>
+                <li data-category="beeld" data-keywords="interieur binnen raam bloempot vlaggen ballonen keuken"><div><img src="img/Galerij/Bloemen aan raam RGB.jpg" alt="Photo 7"></div></li>
+                <li data-category="beeld" data-keywords="bloem hand close-up"><div><img src="img/Galerij/Bloemen in hand RGB.jpg" alt="Photo 8"></div></li>
+                <li data-category="beeld" data-keywords="bos buiten bomen"><div><img src="img/Galerij/Bos RGB.jpg" alt="Photo 9"></div></li>
+                <li data-category="beeld" data-keywords="bedrijf donatie box doos donneren"><div><img src="img/Galerij/Donatie box RGB.jpg" alt="Photo 10"></div></li>
+                <li data-category="beeld" data-keywords="gebouw groen appartementen"><div><img src="img/Galerij/Groen gebouw RGB.jpg" alt="Photo 11"></div></li>
+                <li data-category="beeld" data-keywords="bedrijf hoodie man mens persoon buiten bril"><div><img src="img/Galerij/Hoodie RGB.jpg" alt="Photo 12"></div></li>
+                <li data-category="beeld" data-keywords="aarde"><div><img src="img/Galerij/Logo in aarde RGB.jpg" alt="Photo 13"></div></li>
+                <li data-category="beeld" data-keywords="plant bomen parking buiten auto's"><div><img src="img/Galerij/Parking RGB.jpg" alt="Photo 14"></div></li>
+                <li data-category="beeld" data-keywords="plant aarde licht zon hoopje hoop"><div><img src="img/Galerij/Plant op hoop aarde RGB.jpg" alt="Photo 15"></div></li>
+                <li data-category="beeld" data-keywords="bedrijf mensen vrouw man jongen meisje praten buiten"><div><img src="img/Galerij/Pratende mensen RGB.jpg" alt="Photo 16"></div></li>
+                <li data-category="beeld" data-keywords="plant struik diversiteit"><div><img src="img/Galerij/Struik RGB.jpg" alt="Photo 17"></div></li>
+                <li data-category="beeld" data-keywords="bedrijf auto mercedes-benz sprinter elektrisch"><div><img src="img/Galerij/Urbanblooms auto RGB.jpg" alt="Photo 18"></div></li>
+                <li data-category="beeld" data-keywords="bloem bedrijf tafel"><div><img src="img/Galerij/Urbanblooms tafel RGB.jpg" alt="Photo 19"></div></li>
+                <li data-category="beeld" data-keywords="bloem vaas pot bloempot raam licht buiten"><div><img src="img/Galerij/Vaas met raam RGB.jpg" alt="Photo 20"></div></li>
+            
+                <li data-category="grafisch" data-keywords="pdf advertentie reclame"><a href="grafisch werk/Advertentie.pdf" target="_blank"><embed src="grafisch werk/Advertentie.pdf" type="application/pdf" width="600" height="400"></a></li>
+                <li data-category="grafisch" data-keywords="pdf e-mail email"><a href="grafisch werk/e-mail handtekening.pdf" target="_blank"><embed src="grafisch werk/e-mail handtekening.pdf" type="application/pdf" width="600" height="400"></a></li>
+                <li data-category="grafisch" data-keywords="pdf facebook"><a href="grafisch werk/Facebook banner.pdf" target="_blank"><embed src="grafisch werk/Facebook banner.pdf" type="application/pdf" width="600" height="400"></a></li>
+                <li data-category="grafisch" data-keywords="pdf flyer folder"><a href="grafisch werk/Flyer.pdf" target="_blank"><embed src="grafisch werk/Flyer.pdf" type="application/pdf" width="600" height="400"></a></li>
+                <li data-category="grafisch" data-keywords="pdf infograpic"><a href="grafisch werk/Infograpic.pdf" target="_blank"><embed src="grafisch werk/Infograpic.pdf" type="application/pdf" width="600" height="400"></a></li>
+                <li data-category="grafisch" data-keywords="pdf instagram story"><a href="grafisch werk/Instagram story.pdf" target="_blank"><embed src="grafisch werk/Instagram story.pdf" type="application/pdf" width="600" height="400"></a></li>
+            </ul>
+        </div>
+                
             <div id="lightbox" class="lightbox">
                 <span class="close">&times;</span>
                 <img class="lightbox-content" id="lightbox-img">
@@ -72,7 +87,6 @@
             <div class="contactinformatie">
                 <h1>Contact<span>informatie</span></h1>
                 <p>
-                    Adres: Hoofdkantoor in Brussel <br>
                     Telefoonnummer: +32 (0)2 123 4567 <br>
                     E-mailadres: info@urbanblooms.org
                 </p>

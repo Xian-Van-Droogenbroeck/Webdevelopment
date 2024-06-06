@@ -176,27 +176,17 @@ nav a:hover {
 }
 
 .header-text img {
-    margin-left: 3%;
-    margin-top: 5%;
+    margin-left: 35%;
+    margin-top: 10%;
 }
 
 .header-text p {
-    margin-top: 2%;
-    margin-left: 3%;
+    margin-left: 5%;
+    margin-top: 10%;
     font-family: "Rambla", sans-serif;
     font-size: 1.25rem;
     width: 40%;
     color: #93b999;
-}
-
-.header-button {
-    margin-left: 3%;
-    margin-top: 5%;
-}
-
-span button {
-    padding: 20px;
-    font-size: 1.25rem;
 }
 
 .over-ons {
@@ -668,6 +658,35 @@ textarea:focus {
 }
 
 /*Gallerypage*/
+#filterInput {
+    width: 90%;
+    margin-left: 4%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.filter-buttons button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+#itemsList {
+    list-style-type: none;
+    padding: 0;
+}
+
 .header-gallerypage {
     height: 30vh;
 }
@@ -1096,16 +1115,6 @@ textarea:focus {
         margin-top: 10%;
         text-align: center;
         width: 80%;
-    }
-
-    .header-button {
-        display: flex;
-        justify-content: center;
-    }
-    
-    span button {
-        padding: 16px;
-        font-size: 1rem;
     }
 
     .over-ons {

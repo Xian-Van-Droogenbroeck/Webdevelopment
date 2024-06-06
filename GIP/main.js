@@ -55,6 +55,46 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+/*Filter buttons*/
+document.addEventListener('DOMContentLoaded', () => {
+    const filterInput = document.getElementById('filterInput');
+    const itemsList = document.getElementById('itemsList');
+    const items = itemsList.getElementsByTagName('li');
+    const buttons = document.querySelectorAll('.filter-buttons button');
+
+    filterInput.addEventListener('keyup', filterItems);
+    buttons.forEach(button => button.addEventListener('click', filterByCategory));
+
+    function filterItems() {
+        const filterValue = filterInput.value.toLowerCase();
+
+        for (let i = 0; i < items.length; i++) {
+            const item = items[i];
+            const itemKeywords = item.getAttribute('data-keywords') ? item.getAttribute('data-keywords').toLowerCase() : '';
+
+            if (itemKeywords.includes(filterValue)) {
+                item.style.display = '';
+            } else {
+                item.style.display = 'none';
+            }
+        }
+    }
+
+    function filterByCategory(e) {
+        const category = e.target.getAttribute('data-filter');
+        filterInput.value = '';  // Clear the text filter when a category is selected
+
+        for (let i = 0; i < items.length; i++) {
+            const item = items[i];
+            if (category === 'alles' || item.getAttribute('data-category') === category) {
+                item.style.display = '';
+            } else {
+                item.style.display = 'none';
+            }
+        }
+    }
+});
+
 /*Video afspelen*/
 window.onload = function(){
     let player = document.getElementById("player"),
