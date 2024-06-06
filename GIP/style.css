@@ -189,6 +189,16 @@ nav a:hover {
     color: #93b999;
 }
 
+.header-button {
+    margin-left: 3%;
+    margin-top: 5%;
+}
+
+span button {
+    padding: 20px;
+    font-size: 1.25rem;
+}
+
 .over-ons {
     margin-top: 10%;
     font-family: "Rambla", sans-serif;
@@ -294,26 +304,12 @@ span .card-button {
 }
 
 /*Video*/
-#play {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    z-index: 1;
-}
-
-#player {
-    display: block;
-    height: auto;
-    width: 50%;
-}
-
 .video {
     position: relative;
     display: inline-block;
     display: flex;
     justify-content: center;
+    margin-top: 5%;
 }
 
 .video-text {
@@ -321,6 +317,7 @@ span .card-button {
     font-weight: 300;
     font-size: 2.5rem;
     margin-left: 5.5%;
+    margin-top: 5%;
     color: #93b999;
 }
 
@@ -656,7 +653,7 @@ textarea:focus {
 }
 
 .socials-contactpage img {
-    width: 100%;
+    width: 7%;
     margin-top: 10%;
     margin-right: 3%;
     transition: 0.3s;
@@ -1069,7 +1066,7 @@ textarea:focus {
 }
 
 /*Gsm*/
-@media only screen and (max-width: 393px) {
+@media only screen and (max-width: 729px) {
     /*Hamburger*/
     .line-hamburger {
         width: 29px;
@@ -1101,6 +1098,16 @@ textarea:focus {
         width: 80%;
     }
 
+    .header-button {
+        display: flex;
+        justify-content: center;
+    }
+    
+    span button {
+        padding: 16px;
+        font-size: 1rem;
+    }
+
     .over-ons {
         margin-top: 0%;
     }
@@ -1124,11 +1131,8 @@ textarea:focus {
     }
 
     /*Video*/
-    #play {
-        width: 5%;
-    }
 
-    #player {
+    iframe {
         width: 85%;
         margin-top: 10%;
     }
