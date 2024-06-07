@@ -265,7 +265,7 @@ nav a:hover {
 .card-button {
     margin: 5%;
     margin-left: 10%;
-    padding: 20px 20px;
+    padding: 10px 10px;
     border-radius: 15px;
     border: none;
     background-color: #93b999;
@@ -286,7 +286,6 @@ nav a:hover {
 }
 
 span .card-button {
-    margin-top: 9%;
 }
 
 .card-button:hover {
@@ -361,7 +360,7 @@ footer {
 }
 
 .contactinformatie h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 300;
 }
 
@@ -370,7 +369,7 @@ footer {
 }
 
 .contactinformatie p {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 300;
     margin-top: 10%;
 }
@@ -382,7 +381,7 @@ footer {
 }
 
 .nieuwsbrief h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
     font-weight: 300;
 }
@@ -442,14 +441,14 @@ button:hover {
 
 .bedrijf h1 {
     font-weight: 300;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .bedrijf a {
     display: block;
     text-decoration: none;
     color: #000000;
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-top: 2%;
 }
 
@@ -493,55 +492,31 @@ button:hover {
     margin-top: 10%;
 }
 
-.fastlinks {
-    margin-right: 15%;
-    margin-top: 1%;
+.back-arrow {
+    position: fixed;
+    bottom: 10;
+    right: 0;
+    margin-right: 2%;
+    z-index: 1;
+    background-color: #e4efdb;
+    padding: 5px 10px;
+    border-radius: 100%;
+    transition: 0.5s;
 }
 
-.fastlinks a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: #000000;
+.back-arrow:hover {
+    background-color: #bbb;
+}
+
+.back-arrow a {
+    color: #93b999;
     font-size: 1.5rem;
-    margin-top: 10%;
+    transition: 0.3s;
 }
 
-.fastlinks a {
-    background-image: linear-gradient(
-      to right,
-      #719176,
-      #719176 50%,
-      #93b999 50%
-    );
-    background-size: 200% 100%;
-    background-position: -100%;
-    padding: 5px 0;
-    position: relative;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .fastlinks a:before{
-    content: '';
-    background: #719176;
-    display: block;
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .fastlinks a:hover {
-   background-position: 0;
-  }
-  
-  .fastlinks a:hover::before{
-    width: 100%;
-  }
+.back-arrow a:hover {
+    color: #719176;
+}
 
 /*Contactpage*/
 .plant-contactpage {
@@ -773,11 +748,11 @@ textarea:focus {
     }
 
     .over-ons h1 {
-        font-size: 1.875rem;
+        font-size: 1.625rem;
     }
 
     .over-ons p {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     #play {
@@ -786,7 +761,6 @@ textarea:focus {
 
     .video-text {
         font-size: 1.875rem;
-        margin-left: 10%;
         margin-top: 6%;
     }
 
@@ -796,7 +770,7 @@ textarea:focus {
     }
 
     .socials {
-        width: 40%;
+        width: 30%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -1052,7 +1026,7 @@ textarea:focus {
     }
 
     /*Footer*/
-    .fastlinks {
+    .back-arrow {
         display: none;
     }
 
