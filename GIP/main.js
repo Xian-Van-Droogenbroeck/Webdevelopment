@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function() {
         img.addEventListener('click', function() {
             lightbox.style.display = 'block';
             lightboxImg.src = this.src;
+            lightboxImg.style.height = '90vh';
+            lightboxImg.style.width = 'auto';
         });
 
         img.addEventListener('mousemove', function(e) {
@@ -35,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function() {
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
 
-            // Making the movement faster and less effective
             this.style.transform = `translate(${(x - rect.width / 2) / 20}px, ${(y - rect.height / 2) / 20}px)`;
         });
 
@@ -82,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function filterByCategory(e) {
         const category = e.target.getAttribute('data-filter');
-        filterInput.value = '';  // Clear the text filter when a category is selected
+        filterInput.value = ''; 
 
         for (let i = 0; i < items.length; i++) {
             const item = items[i];
